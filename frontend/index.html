@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Governance & Knowledge Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI Governance &amp; Knowledge Assistant</h1>
+        <p>Upload documents, generate summaries, and ask questions.</p>
+    </header>
+
+    <main>
+        <!-- Upload Section -->
+        <section class="card" aria-labelledby="upload-heading">
+            <h2 id="upload-heading">Upload Document</h2>
+            <form id="upload-form">
+                <label for="file-input">Select a document (PDF, TXT, DOCX):</label>
+                <input type="file" id="file-input" accept=".pdf,.txt,.docx" required>
+                <button type="submit">Upload</button>
+            </form>
+            <div id="upload-result" class="result" role="status" aria-live="polite"></div>
+        </section>
+
+        <!-- Summarise Section -->
+        <section class="card" aria-labelledby="summarise-heading">
+            <h2 id="summarise-heading">Generate Summary</h2>
+            <form id="summarise-form">
+                <label for="summarise-key">S3 Key:</label>
+                <input type="text" id="summarise-key" placeholder="documents/..." required>
+                <button type="submit">Summarise</button>
+            </form>
+            <div id="summarise-result" class="result" role="status" aria-live="polite"></div>
+        </section>
+
+        <!-- Ask Section -->
+        <section class="card" aria-labelledby="ask-heading">
+            <h2 id="ask-heading">Ask a Question</h2>
+            <form id="ask-form">
+                <label for="ask-key">S3 Key:</label>
+                <input type="text" id="ask-key" placeholder="documents/..." required>
+                <label for="question-input">Your Question:</label>
+                <input type="text" id="question-input" placeholder="What is this document about?" required>
+                <button type="submit">Ask</button>
+            </form>
+            <div id="ask-result" class="result" role="status" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AI Governance Assistant. All interactions are logged for auditing.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
