@@ -32,7 +32,7 @@ def test_health_latency_single():
     p95 = sorted(times)[94]
     p99 = sorted(times)[98]
     print(f"\n{'='*60}")
-    print(f"PERFORMANCE BENCHMARK: /health (100 sequential requests)")
+    print("PERFORMANCE BENCHMARK: /health (100 sequential requests)")
     print(f"{'='*60}")
     print(f"  Average latency:  {avg:.2f} ms")
     print(f"  P95 latency:      {p95:.2f} ms")
